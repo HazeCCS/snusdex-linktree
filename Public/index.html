@@ -4,9 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <title>SNUSDEX® – Try the App</title>
+        <meta name="theme-color" content="#050505" />
+        <link rel="icon" href="Assets/favicon-32.png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="Assets/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -49,7 +52,10 @@
             body {
                 min-height: 100%;
                 min-height: 100dvh;
-                background: #000;
+                background: #050505;
+                background-image: radial-gradient(ellipse 900px 700px at 50% 0%, #121212 0%, #050505 60%);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
                 overflow-x: clip;
                 overflow-y: auto;
                 display: flex;
@@ -90,9 +96,15 @@
             }
 
             /* MARK: - Components */
+            .tagline {
+                font-family: 'Instrument Serif', serif;
+                font-style: italic;
+                font-weight: 400;
+            }
+
             .card {
-                background: linear-gradient(135deg, #2C2C2E 0%, #1C1C1E 100%);
-                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: linear-gradient(135deg, #171717 0%, #0a0a0a 100%);
+                border: 1px solid rgba(255, 255, 255, 0.09);
                 border-radius: 20px;
                 transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1),
                     box-shadow 0.2s cubic-bezier(0.32, 0.72, 0, 1),
@@ -187,7 +199,7 @@
             #modal-box {
                 width: 100%;
                 max-width: 310px;
-                background: #1C1C1E;
+                background: #111113;
                 border: 1px solid rgba(255,255,255,0.10);
                 border-radius: 24px;
                 padding: 28px 24px 20px;
@@ -243,10 +255,11 @@
 
                 <!-- MARK: - Hero -->
                 <section class="flex flex-col items-center gap-4 text-center animate-fade-up d1">
-                    <img src="Assets/logo.png" alt="SNUSDEX Logo" style="width:88px;height:88px;border-radius:22%;object-fit:cover;display:block;box-shadow:0 15px 35px rgba(0,0,0,0.5);" />
-                    <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <span style="font-size:40px;font-weight:800;letter-spacing:-1.5px;line-height:1;color:#fff;"> SNUSDEX®</span>
-                        <p style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.45);max-width:270px;"> Scan your cans, track your intake and collect badges.</p>
+                    <img src="Assets/icon.png" alt="SNUSDEX Logo" style="width:88px;height:88px;object-fit:contain;display:block;filter:drop-shadow(0 15px 30px rgba(0,0,0,0.6));" />
+                    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+                        <span style="font-size:38px;font-weight:800;letter-spacing:-1.5px;line-height:1;color:#fff;text-transform:uppercase;"> SNUSDEX®</span>
+                        <p class="tagline" style="font-size:24px;color:rgba(255,255,255,0.75);">Your Dex at your hands</p>
+                        <p style="font-size:13px;line-height:1.6;color:rgba(255,255,255,0.40);max-width:270px;margin-top:4px;"> Scan your cans, track your intake and collect badges.</p>
                     </div>
                 </section>
                 <!-- MARK: - App Description -->
@@ -283,7 +296,7 @@
                 <!-- MARK: - Link Cards -->
                 <section style="display:flex;flex-direction:column;gap:12px;">
                     <a href="https://snusdex.com" target="_blank" rel="noopener noreferrer" class="card animate-fade-up d3">
-                        <img src="Assets/logo.png" alt="SNUSDEX Logo" style="width:44px;height:44px;border-radius:22%;object-fit:cover;display:block;flex-shrink:0;" />
+                        <img src="Assets/icon.png" alt="SNUSDEX Logo" style="width:44px;height:44px;object-fit:contain;display:block;flex-shrink:0;" />
                         <div style="flex:1;min-width:0;">
                             <p style="font-size:14px;font-weight:600;color:#fff;line-height:1.2;">Website</p>
                             <p style="font-size:12px;color:rgba(255,255,255,0.38);margin-top:2px;">Learn more about the app</p>
@@ -320,7 +333,8 @@
             </div>
             <!-- MARK: - Footer -->
             <div id="footer">
-                <p style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.15);"> © 2026 SNUSDEX® </p>
+                <p style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.30);"> <span style="color:#C9A876;">18+</span> For adult users only </p>
+                <p style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.15);margin-top:10px;"> © 2026 SNUSDEX® </p>
             </div>
         </div>
 
